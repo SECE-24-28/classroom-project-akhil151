@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #222;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.intro {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #242424;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font-size: 42px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.intro h2 {
+    font-size: 22px;
+    color: #888;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #bbb;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-secondary {
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.btn-secondary:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #4CAF50;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.green-title {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.about-section {
+    display: flex;
+    gap: 40px;
+    align-items: start;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    min-width: 300px;
+}
+
+.stat-box {
+    background-color: #2a2a2a;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.stat-box h4 {
+    color: #4CAF50;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    color: #888;
+    font-size: 14px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.skill-box {
+    background-color: #2a2a2a;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.skill-box:hover {
+    border-color: #4CAF50;
+}
+
+.skill-box h4 {
+    color: #e0e0e0;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.skill-box p {
+    color: #888;
+    font-size: 13px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-box {
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.project-header {
+    background-color: #4CAF50;
+    padding: 20px;
+}
+
+.project-header h4 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.project-header span {
+    color: #e8f5e9;
+    font-size: 14px;
+}
+
+.project-body {
+    padding: 20px;
+}
+
+.project-body p {
+    color: #bbb;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #1a1a1a;
+    color: #4CAF50;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    border: 1px solid #333;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    color: #bbb;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contact-links a:hover {
+    color: #4CAF50;
+}
+
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 30px 20px;
+    color: #666;
+    margin-top: 60px;
+}
+
+.built-line {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .stats {
+        min-width: auto;
+    }
+
+    nav ul {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
