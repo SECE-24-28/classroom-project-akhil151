@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticket Booking</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Railway Ticket Booking</h1>
+            <form id="railwayForm">
+                <div class="form-group">
+                    <label for="passengerName">Passenger Name *</label>
+                    <input type="text" id="passengerName" name="passengerName" placeholder="Enter full name as per ID">
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" name="age" min="1" max="120" placeholder="Age">
+                        <span class="error" id="ageError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" name="gender">
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error" id="genderError"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number">
+                    <span class="error" id="mobileError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fromStation">From Station *</label>
+                        <input type="text" id="fromStation" name="fromStation" placeholder="Departure station">
+                        <span class="error" id="fromError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="toStation">To Station *</label>
+                        <input type="text" id="toStation" name="toStation" placeholder="Arrival station">
+                        <span class="error" id="toError"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="journeyDate">Journey Date *</label>
+                        <input type="date" id="journeyDate" name="journeyDate">
+                        <span class="error" id="dateError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="trainClass">Class *</label>
+                        <select id="trainClass" name="trainClass">
+                            <option value="">Select Class</option>
+                            <option value="sleeper">Sleeper (SL)</option>
+                            <option value="3ac">3rd AC (3A)</option>
+                            <option value="2ac">2nd AC (2A)</option>
+                            <option value="1ac">1st AC (1A)</option>
+                            <option value="chair">Chair Car (CC)</option>
+                        </select>
+                        <span class="error" id="classError"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="numPassengers">Number of Passengers *</label>
+                    <input type="number" id="numPassengers" name="numPassengers" min="1" max="6" placeholder="Max 6 passengers">
+                    <span class="error" id="passengersError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Berth Preference</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="berth" value="lower">
+                            Lower Berth
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="berth" value="middle">
+                            Middle Berth
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="berth" value="upper">
+                            Upper Berth
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="idProof">ID Proof Type *</label>
+                    <select id="idProof" name="idProof">
+                        <option value="">Select ID Proof</option>
+                        <option value="aadhar">Aadhar Card</option>
+                        <option value="pan">PAN Card</option>
+                        <option value="passport">Passport</option>
+                        <option value="voter">Voter ID</option>
+                        <option value="license">Driving License</option>
+                    </select>
+                    <span class="error" id="idError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="terms" name="terms">
+                        I agree to the terms and conditions *
+                    </label>
+                    <span class="error" id="termsError"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Book Ticket</button>
+            </form>
+            <div id="successMessage" class="success-message"></div>
+        </div>
+    </div>
+    <script src="form2.js"></script>
+</body>
+</html>
