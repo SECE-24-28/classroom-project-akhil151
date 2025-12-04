@@ -14,6 +14,7 @@ form.addEventListener('submit', function(e) {
     const skills = document.querySelectorAll('input[name="skills"]:checked');
     const resume = document.getElementById('resume').files[0];
     
+    console.log(fullName, email, phone, dob, position, experience, skills, resume);
     
     if (!fullName || !email || !phone || !dob || !position) {
         showMessage('Please fill in all required fields!', 'error');
