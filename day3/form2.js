@@ -144,8 +144,9 @@ function showError(elementId, message) {
     document.getElementById(elementId).textContent = message;
 }
 
-function clearErrors() {
-    const errors = document.querySelectorAll('.error');
-    errors.forEach(error => error.textContent = '');
+function clearError() {
+  const errorMsg = document.getElementById('errorMessage');
+  errorMsg.textContent = '';
+  errorMsg.classList.remove('show');
 }
 
