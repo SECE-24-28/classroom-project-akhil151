@@ -31,11 +31,13 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors";
 import productRoute from "./routes/productroute.js";
 
 dotenv.config();
 
 const server = express();
+server.use(cors());
 server.use(express.json());
 
 server.get("/", (req, res) => {
