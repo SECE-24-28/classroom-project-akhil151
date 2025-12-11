@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Para from "./components/para";
+import Product from "./components/product";
 import { useState } from "react";
 
 const App = ({name="red",age="18",city="coimbatore"}) => {
@@ -12,6 +13,7 @@ const App = ({name="red",age="18",city="coimbatore"}) => {
       <button onClick={() => setCount(count - 1)}>sub</button>
       <Header/>
       <Para/>
+      <Product/>
     </div>
   )
 }
