@@ -33,6 +33,9 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import userRoute from "./routes/userroute.js";
+import adminRoute from "./routes/adminroute.js";
+import productRoute from "./routes/productroute.js";
+
 
 dotenv.config();
 
@@ -45,6 +48,8 @@ server.get("/", (req, res) => {
 });
 
 server.use("/", userRoute);
+server.use("/", adminRoute);
+server.use("/", productRoute);
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("mongodb connected"))

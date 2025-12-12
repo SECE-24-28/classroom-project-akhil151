@@ -33,7 +33,7 @@ export const getuserbyid = async (req,res) =>{
 
 export const deleteuser = async(req,res) =>{
     try{
-        const users = await user.deleteuser(user.params.id);
+        const users = await user.findByIdAndDelete(req.params.id);
         res.status(200).json(users);
     }
     catch(error){
@@ -45,13 +45,14 @@ export const deleteuser = async(req,res) =>{
 
 export const registeruser = async(req,res)=>{
     try{
-        const users = await user.create(req.body);
-        res.status(200).json(users);
+        const {email} = req.body;
         const userexist = await user.findOne({email});
         if(userexist){
-            res.status(400);
-            throw new Error("User not found");
-    }}
+            return res.status(400).json({message: "User already exists"});
+        }
+        const users = await user.create(req.body);
+        res.status(201).json(users);
+    }
     catch(error){
         res.status(500).json({message : error.message});
     }
@@ -59,17 +60,16 @@ export const registeruser = async(req,res)=>{
 
 export const loginuser = async(req,res) => {
     try{
-         const {email,password} = req.body;
+        const {email,password} = req.body;
         const userexist = await user.findOne({email});
         if(!userexist){
-            res.status(400);
-            throw new Error("User not found");
+            return res.status(400).json({message: "User not found"});
         }
-        const inmatch = await userexist.comparepassword(password);
-        if(!ismatch){
-            res.status(400);
-            throw new Error("Invalid password");
+        // Simple password comparison (add bcrypt for production)
+        if(userexist.password !== password){
+            return res.status(400).json({message: "Invalid password"});
         }
+        res.status(200).json({message: "Login successful", user: userexist});
     }
    catch(error){
         res.status(500).json({message : error.message});
