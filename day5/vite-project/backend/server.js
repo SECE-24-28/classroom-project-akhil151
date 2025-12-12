@@ -32,7 +32,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import productRoute from "./routes/productroute.js";
+import userRoute from "./routes/userroute.js";
 
 dotenv.config();
 
@@ -44,7 +44,7 @@ server.get("/", (req, res) => {
   res.json({ message: "Server is running!" });
 });
 
-server.use("/", productRoute);
+server.use("/", userRoute);
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("mongodb connected"))
